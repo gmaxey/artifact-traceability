@@ -1,0 +1,10 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: Action to publish build artifact
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    steps:
+      - uses: register-build-artifact
+        name: Publish artifact
