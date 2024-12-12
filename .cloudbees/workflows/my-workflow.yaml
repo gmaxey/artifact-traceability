@@ -25,5 +25,5 @@ jobs:
       - name: Build container image with Kaniko
         uses: cloudbees-io/kaniko@v1
         with:
-          destination: docker.io/jyoungcb/docker-demo:0.0.1-${{cloudbees.version}}
+          destination: docker.io/gmaxey/artifact-traceability:0.0.1-${{cloudbees.version}}
           verbosity: debug
