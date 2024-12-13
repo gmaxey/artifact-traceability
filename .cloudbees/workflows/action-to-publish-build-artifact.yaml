@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    stage: dev
     steps:
       - uses: cloudbees-io/register-build-artifact@v1
         name: Publish artifact
