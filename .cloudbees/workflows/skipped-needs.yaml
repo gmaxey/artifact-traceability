@@ -4,6 +4,14 @@ name: skipped-needs
 on:
   workflow_dispatch:
 jobs:
+  job0:
+    if: ${{ false }}
+    steps:
+      - name: Say hello
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          echo "hello world"
   job1:
     steps:
       - name: Say hello
@@ -14,6 +22,7 @@ jobs:
     needs:
       - approve
   approve:
+    needs: job0
     if: ${{ false }}
     timeout-minutes: 4320
     delegates: cloudbees-io/manual-approval/custom-job.yml@v1
