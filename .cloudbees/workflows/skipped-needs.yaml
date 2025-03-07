@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   job0:
+    if: ${{ false }}
     steps:
       - name: Say hello
         run: |
