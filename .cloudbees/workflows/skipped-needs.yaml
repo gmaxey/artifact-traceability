@@ -12,7 +12,7 @@ jobs:
         run: |
           echo "hello world"
   job2:
-    if: 1=0
+    if: ${{ false }}
     needs: job1
     steps:
       - name: Say hello
