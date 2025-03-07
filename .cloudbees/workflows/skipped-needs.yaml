@@ -27,7 +27,7 @@ jobs:
     needs: job0
     if: ${{ false }}
     timeout-minutes: 4320
-    delegates: cloudbees-io/manual-approval/custom-job.yml@v1
+    delegates: gmaxey/manual-approval/custom-job.yml
     with:
       approvers: ""
       disallowLaunchByUser: false
